@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <title>Toy Car Shop - Zoutoys</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>Zoutoys</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Product Listing section -->
+  <section class="product_listing_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Filter Products</h3>
+          <form id="filterForm">
+            <div class="form-group">
+              <label for="categoryFilter">Category:</label>
+              <select class="form-control" id="categoryFilter">
+                <option value="">All Categories</option>
+                <!-- Add options dynamically based on available categories -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="priceRangeFilter">Price Range:</label>
+              <input type="number" class="form-control" id="priceRangeFilterMin" placeholder="Min">
+              <input type="number" class="form-control mt-2" id="priceRangeFilterMax" placeholder="Max">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Apply Filters</button>
+          </form>
+        </div>
+        <div class="col-md-9">
+          <h3>Available Toy Cars</h3>
+          <div class="row" id="productListing">
+            <!-- Products will be dynamically added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Product Listing section -->
+  <a href="checkoutRent.html" class="btn btn-primary">Proceed to Checkout</a>
+  <!-- Product Details Modal -->
+  <div class="modal fade" id="productDetailsModal" tabindex="-1" role="dialog" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productDetailsModalLabel">Product Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="productDetailsContent">
+          <!-- Product details will be loaded dynamically here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Product Details Modal -->
+
+  <!-- Cart Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="cartContent">
+          <!-- Cart items will be dynamically loaded here -->
+          <p>Your cart is empty.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Cart Modal -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i><span>Location</span></a>
+              <a href=""><i class="fa fa-phone" aria-hidden="true"></i><span>Call +01 1234567890</span></a>
+              <a href=""><i class="fa fa-envelope" aria-hidden="true"></i><span>demo@gmail.com</span></a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>Info</h4>
+            <p>necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>Links</h4>
+            <div class="info_links">
+              <a class="active" href="index.html">Home</a>
+              <a class="" href="about.html">About</a>
+              <a class="" href="shop.html">Shop</a>
+              <a class="" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <h4>Subscribe</h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="https://html.design/">Free Html Templates</a></p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <script>
+    // Dummy product data
+    let products = [
+      { name: 'Toy Car 1', description: 'Description for Toy Car 1', price: 10, stock: 5 },
+      { name: 'Toy Car 2', description: 'Description for Toy Car 2', price: 20, stock: 10 },
+      { name: 'Toy Car 3', description: 'Description for Toy Car 3', price: 30, stock: 3 },
+      { name: 'Toy Car 4', description: 'Description for Toy Car 4', price: 40, stock: 7 },
+      { name: 'Toy Car 5', description: 'Description for Toy Car 5', price: 50, stock: 6 },
+    ];
+    
+    // Function to render product listing
+    function renderProductListing(products) {
+      const productListing = document.getElementById('productListing');
+      productListing.innerHTML = '';
+
+      products.forEach(product => {
+        const col = document.createElement('div');
+        col.classList.add('col-md-4', 'mb-4');
+        col.innerHTML = `
+          <div class="card">
+            <img src="images/toy_car.jpg" class="card-img-top" alt="Toy Car">
+            <div class="card-body">
+              <h5 class="card-title">${product.name}</h5>
+              <p class="card-text">${product.description}</p>
+              <p class="card-text">Price: $${product.price}</p>
+              <p class="card-text">Stock: ${product.stock}</p>
+              <button class="btn btn-primary btn-sm" onclick="viewProductDetails('${product.name}')">View Details</button>
+              <button class="btn btn-success btn-sm ml-2" onclick="addToCart('${product.name}')">Add to Cart</button>
+            </div>
+          </div>
+        `;
+        productListing.appendChild(col);
+      });
+    }
+
+    // Function to filter products
+    document.getElementById('filterForm').onsubmit = function (e) {
+      e.preventDefault();
+      const categoryFilter = document.getElementById('categoryFilter').value;
+      const priceRangeMin = parseInt(document.getElementById('priceRangeFilterMin').value) || 0;
+      const priceRangeMax = parseInt(document.getElementById('priceRangeFilterMax').value) || Infinity;
+
+      const filteredProducts = products.filter(product => {
+        const meetsCategoryFilter = categoryFilter ? product.category === categoryFilter : true;
+        const meetsPriceRange = product.price >= priceRangeMin && product.price <= priceRangeMax;
+        return meetsCategoryFilter && meetsPriceRange;
+      });
+
+      renderProductListing(filteredProducts);
+    };
+
+    // Function to view product details
+    function viewProductDetails(productName) {
+      const product = products.find(p => p.name === productName);
+      const modalBody = document.getElementById('productDetailsContent');
+      modalBody.innerHTML = `
+        <p><strong>Name:</strong> ${product.name}</p>
+        <p><strong>Description:</strong> ${product.description}</p>
+        <p><strong>Price:</strong> $${product.price}</p>
+        <p><strong>Stock:</strong> ${product.stock}</p>
+      `;
+      $('#productDetailsModal').modal('show');
+    }
+
+    // Function to add product to cart
+    function addToCart(productName) {
+      const product = products.find(p => p.name === productName);
+      // Implement cart functionality here
+      // For demo purposes, just alert
+      alert(`Added ${product.name} to cart.`);
+    }
+
+    // Initial render
+    renderProductListing(products);
+  </script>
+
+</body>
+
+</html>

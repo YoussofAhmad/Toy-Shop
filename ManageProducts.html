@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <title>Admin Dashboard - Zoutoys</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>Zoutoys</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa fa-user" aria-hidden="true"></i> Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Admin Dashboard section -->
+  <section class="admin_dashboard_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form id="productForm">
+            <div class="form-group">
+              <label for="productName">Product Name:</label>
+              <input type="text" class="form-control" id="productName" name="productName" required>
+            </div>
+            <div class="form-group">
+              <label for="productDescription">Product Description:</label>
+              <textarea class="form-control" id="productDescription" name="productDescription" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="productPrice">Product Price:</label>
+              <input type="number" class="form-control" id="productPrice" name="productPrice" required>
+            </div>
+            <div class="form-group">
+              <label for="productStock">Stock Count:</label>
+              <input type="number" class="form-control" id="productStock" name="productStock" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3>Product List</h3>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Stock Count</th>
+                <th>Renter</th>
+                <th>Rental Start Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="productTableBody">
+              <!-- Products will be dynamically added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Admin Dashboard section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i><span>Location</span></a>
+              <a href=""><i class="fa fa-phone" aria-hidden="true"></i><span>Call +01 1234567890</span></a>
+              <a href=""><i class="fa fa-envelope" aria-hidden="true"></i><span>demo@gmail.com</span></a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>Info</h4>
+            <p>necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>Links</h4>
+            <div class="info_links">
+              <a class="active" href="index.html">Home</a>
+              <a class="" href="about.html">About</a>
+              <a class="" href="shop.html">Shop</a>
+              <a class="" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <h4>Subscribe</h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>&copy; <span id="displayYear"></span> All Rights Reserved By <a href="https://html.design/">Free Html Templates</a></p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+
+  <script>
+    // Dummy product data with rental information
+    let products = [
+      { name: 'Toy Car 1', description: 'Description for Toy Car 1', price: 10, stock: 5, renter: '', rentalStartDate: '' },
+      { name: 'Toy Car 2', description: 'Description for Toy Car 2', price: 20, stock: 10, renter: '', rentalStartDate: '' },
+      { name: 'Toy Car 3', description: 'Description for Toy Car 3', price: 30, stock: 3, renter: '', rentalStartDate: '' },
+      { name: 'Toy Car 4', description: 'Description for Toy Car 4', price: 40, stock: 7, renter: '', rentalStartDate: '' },
+      { name: 'Toy Car 5', description: 'Description for Toy Car 5', price: 50, stock: 6, renter: '', rentalStartDate: '' },
+    ];
+
+    function renderProducts() {
+      const productTableBody = document.getElementById('productTableBody');
+      productTableBody.innerHTML = '';
+
+      products.forEach((product, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${product.name}</td>
+          <td>${product.description}</td>
+          <td>${product.price}</td>
+          <td>${product.stock}</td>
+          <td>${product.renter}</td>
+          <td>${product.rentalStartDate}</td>
+          <td>
+            <button class="btn btn-info btn-sm" onclick="editProduct(${index})">Edit</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteProduct(${index})">Delete</button>
+          </td>
+        `;
+        productTableBody.appendChild(row);
+      });
+    }
+
+    function addProduct(product) {
+      products.push(product);
+      renderProducts();
+    }
+
+    function editProduct(index) {
+      const product = products[index];
+      const renter = prompt('Enter renter name:');
+      const rentalStartDate = prompt('Enter rental start date (YYYY-MM-DD):');
+
+      if (renter !== null && rentalStartDate !== null) {
+        products[index] = {
+          name: product.name,
+          description: product.description,
+          price: product.price,
+          stock: product.stock,
+          renter: renter,
+          rentalStartDate: rentalStartDate,
+        };
+        renderProducts();
+      }
+    }
+
+    function deleteProduct(index) {
+      products.splice(index, 1);
+      renderProducts();
+    }
+
+    document.getElementById('productForm').onsubmit = function (e) {
+      e.preventDefault();
+      const newProduct = {
+        name: document.getElementById('productName').value,
+        description: document.getElementById('productDescription').value,
+        price: document.getElementById('productPrice').value,
+        stock: document.getElementById('productStock').value,
+        renter: '',
+        rentalStartDate: '',
+      };
+      addProduct(newProduct);
+      resetForm();
+    };
+
+    function resetForm() {
+      document.getElementById('productForm').reset();
+    }
+
+    // Initial render
+    renderProducts();
+  </script>
+
+</body>
+
+</html>

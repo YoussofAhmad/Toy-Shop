@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #110482; /* Set header background color */
+            color: #fff; /* Set header text color */
+            padding: 20px 10px; /* Adjust padding to increase height */
+            text-align: center;
+            position: relative; /* Position relative to contain the logout button */
+        }
+        .logout-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #555;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .dashboard-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #110482;
+            padding-top: 50px;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .dashboard-menu.hide {
+            left: -250px;
+        }
+        .dashboard-menu h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .dashboard-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #110482;
+            padding-top: 50px;
+            color: #fff;
+            transition: all 0.3s ease;
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: calc(100% - 50px); /* Set maximum height (viewport height minus header height) */
+        }
+        .dashboard-menu li {
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #0c09d727;
+        }
+        .dashboard-menu li:last-child {
+            border-bottom: none;
+        }
+        .dashboard-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            display: block;
+        }
+        .dashboard-menu a:hover {
+            background-color: #555;
+        }
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #fafafa;
+            cursor: pointer;
+            z-index: 999;
+        }
+        .info-window {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 60px; /* Increased padding for more space inside the window */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px; /* Increased width */
+            max-width: 80%; /* Set maximum width to maintain responsiveness */
+            height: auto; /* Let the height adjust based on content */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        User
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+    <div class="dashboard-menu hide" id="dashboardMenu">
+    <h2>Dashboard</h2>
+    <ul>
+        <li><a href="ViewRent.html">View Car Toys Available for Rent </a></li>
+        <li><a href="ViewBuy.html">View Car Toys Available for Buying</a></li>
+        <li><a href="UserInfo.html">Manage Your Data</a></li>
+        <li><a href="UserInfo.html">View Car Toys Available for Buying</a></li>
+
+
+        
+    </ul>
+    </div>
+
+    <div class="toggle-btn" onclick="toggleDashboardMenu()">
+        &#9776;
+    </div>
+
+    <div class="info-window">
+        <h2>User Information</h2>
+        <p>Role: User</p>
+        <p>Name: User</p>
+        <p>User ID: User1</p>
+        <p>Status: Active</p>
+        <p>Username: Youssef123</p>
+    </div>
+
+    <script>
+        function toggleDashboardMenu() {
+            var dashboardMenu = document.getElementById('dashboardMenu');
+            dashboardMenu.classList.toggle('hide');
+        }
+
+        function logout() {
+            window.location.href = "login.html"; // Redirect to mario.html
+        }
+    </script>
+
+</body>
+</html>
